@@ -23,7 +23,7 @@ namespace POO
                 return true;
             else return false;
         }
-        public void retirarJoven(double retiro)
+        public new void retirar(double retiro)
         {
             if(esTitularValido() == true)
             {
@@ -35,7 +35,7 @@ namespace POO
                 Console.WriteLine("El titular no es valido");
             }
         }
-        public override void mostrar()
+        public new void mostrar()
         {
             Console.WriteLine("*****Cuenta Joven*****");
             Titular.mostrar();

@@ -44,7 +44,7 @@ namespace POO
             
         }
 
-        public override string ToString()
+        override public string ToString()
         {
             return "Nombre: " + nombre;
         }
