@@ -12,31 +12,31 @@ namespace POO
         private int edad;
         private int dni;
 
+        public string Nombre { get => nombre; set => nombre = value; }
+        public int Edad { get => edad; set => edad = value; }
+        public int Dni { get => dni; set => dni = value; }
+
         public Persona()
         {   
         }
         public Persona(string nombre, int edad, int dni)
         {
-            this.nombre = nombre;
-            this.edad = edad;
-            this.dni = dni;
+            this.Nombre = nombre;
+            this.Edad = edad;
+            this.Dni = dni;
         }
-
-        public string Nombre { get => nombre; set => nombre = value; }
-        public int Edad { get => edad; set => edad = value; }
-        public int Dni { get => dni; set => dni = value; }
 
         public void mostrar()
         {
-            Console.WriteLine("Nombre: " + nombre);
+            Console.WriteLine("Nombre: " + Nombre);
 
-            Console.WriteLine("Edad: " + edad);
+            Console.WriteLine("Edad: " + Edad);
 
-            Console.WriteLine("Dni: " + dni);
+            Console.WriteLine("Dni: " + Dni);
         }
         public bool esMayorDeEdad()
         {
-            if (this.edad >= 18)
+            if (this.Edad >= 18)
             {
                 return true;
             }
@@ -46,7 +46,7 @@ namespace POO
 
         override public string ToString()
         {
-            return "Nombre: " + nombre;
+            return String.Format("Nombre: " + Nombre);
         }
     }
 }

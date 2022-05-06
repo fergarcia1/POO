@@ -8,18 +8,18 @@ namespace POO
 {
     class CuentaJoven : Cuenta
     {
-        private int bonificacion;
+        public static int bonificacion = 10;
 
-        public CuentaJoven(int bonificacion)
+        public CuentaJoven(Persona titular, double cantidad)
         {
-            this.Bonificacion = bonificacion;
+            this.Cantidad = cantidad;
+            this.Titular = titular;
         }
 
-        public int Bonificacion { get => bonificacion; set => bonificacion = value; }
 
         public bool esTitularValido()
         {
-            if (this.Titular.Edad >= 18 && this.Titular.Edad <= 25)
+            if (this.Titular.Edad >= 18 && this.Titular.Edad < 25)
                 return true;
             else return false;
         }
@@ -40,7 +40,7 @@ namespace POO
             Console.WriteLine("*****Cuenta Joven*****");
             Titular.mostrar();
             Console.WriteLine("Cantidad: " + Cantidad);
-            Console.WriteLine("Bonificacion: " + Bonificacion);
+            Console.WriteLine("Bonificacion: " + bonificacion);
         }
     }
 }
